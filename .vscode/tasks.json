@@ -22,7 +22,7 @@
         {
             "label": "run",
             "type": "shell",
-            "command": "./iotpower.sh",
+            "command": "./iotpst",
             "problemMatcher": [],
             "args": [
                 "-p",
