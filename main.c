@@ -4,7 +4,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <time.h>
 #include <unistd.h>
 
 #include "libiot_parser.h"
@@ -84,7 +83,6 @@ int main(int argc, char* argv[]) {
     while (!stop) {
         uint8_t result = iot_parse();
         if (result == 0x01) {
-            fprintf(file, "%ld\t", clock());
             for (int i = 0; i < 16; i++) {
                 fprintf(file, "%f\t%f\t", iot_get_voltage(i),
                         iot_get_current(i));
